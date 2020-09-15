@@ -7,7 +7,9 @@ Given user is on Login page
 Then input credentials to login page
 And user search for "banana juice" 
 And add to basket the first item
-Then checkout item from mini cart
-Then select an address and "5 Days" delivery
+Then go to mini cart
+Then checkout item from basket
+Then select an address 
+Then select "5 Days" delivery
 And select payment card
 And place order and pay
