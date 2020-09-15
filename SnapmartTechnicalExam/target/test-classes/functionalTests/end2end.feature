@@ -1,8 +1,7 @@
 Feature: Snapmart Inc End2End Test
 Description: User orders an item from the website and proceeds to checkout.
 
-@InitialTest
-Scenario: Login on OWASP Juice Shop
+Scenario: Login on OWASP Juice Shop and checkout an item
 
 Given user is on Login page
 Then input credentials to login page

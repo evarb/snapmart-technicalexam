@@ -4,9 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import dataProvider.ConfigFileReader;
+import managers.FileReaderManager;
 
 public class LoginPage {
 	WebDriver driver;
+	ConfigFileReader configFileReader;
+
 	
 	@FindBy(id = "email")
 	private WebElement userEmail;
@@ -27,13 +31,13 @@ public class LoginPage {
 	}
 		
 	public void goToLoginPage() {
-		driver.get("http://210.16.121.50:3000/#/login");
+		driver.get(FileReaderManager.getInstance().getConfigFileReader().getApplicationUrl());
 		dismissBtn.click();
 	}
 	
 	public void login() {
-		userEmail.sendKeys("tinolangkabayo@gmail.com");
-		userPassword.sendKeys("Jollibug123!1");
+		userEmail.sendKeys(FileReaderManager.getInstance().getConfigFileReader().getUserEmail());
+		userPassword.sendKeys(FileReaderManager.getInstance().getConfigFileReader().getUserPassword());
 		loginBtn.click();
 	}
 
