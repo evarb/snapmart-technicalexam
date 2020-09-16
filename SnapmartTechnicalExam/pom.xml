@@ -97,6 +97,29 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+        <plugin>
+		    <groupId>com.trivago.rta</groupId>
+		        <artifactId>cluecumber-report-plugin</artifactId>
+		        <version>2.3.4</version>
+		        <executions>
+		            <execution>
+		                <id>report</id>
+		                <phase>post-integration-test</phase>
+		                <goals>
+		                    <goal>reporting</goal>
+		                </goals>
+		            </execution>
+		        </executions>
+		      <configuration>
+		            <sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
+		            <generatedHtmlReportDirectory>${project.build.directory}/generated-report
+		            </generatedHtmlReportDirectory>
+		            <customParameters>
+						<Module>OWASP Juice Shop</Module>
+						<URL>http://210.16.121.50:3000</URL>
+					</customParameters>
+		      </configuration>
+	  	</plugin>
       </plugins>
     </pluginManagement>
   </build>

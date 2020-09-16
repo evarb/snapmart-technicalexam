@@ -15,6 +15,7 @@ public class AddressSelectPageSteps {
 	
 	@Then("select an address")
 	public void select_an_address() throws InterruptedException {
+		System.out.println("selecting address..");
 		addressSelectPage.selectFirstAddress();
 		addressSelectPage.proceedToPayment();
 	}

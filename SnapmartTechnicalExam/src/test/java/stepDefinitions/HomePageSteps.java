@@ -16,17 +16,19 @@ public class HomePageSteps {
 	
 	@Then("user search for \"([^\"]*)\"$")
 	public void user_search_for_(String item) throws InterruptedException {
-		System.out.println(item);
+		System.out.println("searching for " + item);
 		homePage.search(item);
 	}
 
 	@Then("add to basket the first item")
 	public void add_to_basket_the_first_item() {
+		System.out.println("adding item on basket..");
 	    homePage.addToBasket();
 	}
 
 	@Then("go to mini cart")
 	public void go_to_mini_cart() throws InterruptedException {
+		System.out.println("navigating to cart..");
 	    homePage.goToShoppingCart();
 	}
 	

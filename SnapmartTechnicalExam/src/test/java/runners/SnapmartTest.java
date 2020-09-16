@@ -8,10 +8,12 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features ="src/test/resources/functionalTests",
 		glue= {"stepDefinitions"},
-		monochrome = true
+		monochrome = true,
+		plugin = {"json:target/cucumber-report/cucumber.json"},
+		junit = "--step-notifications"
 		
 )
 
-public class SnapmartTestRunner {
+public class SnapmartTest {
 
 }

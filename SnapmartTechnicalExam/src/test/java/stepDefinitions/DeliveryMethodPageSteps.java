@@ -16,6 +16,7 @@ public class DeliveryMethodPageSteps {
 	
 	@Then("select {string} delivery")
 	public void select_delivery_speed(String speed) throws InterruptedException {
+		System.out.println("select delivery speed.." + speed);
 		deliveryMethodPage.chooseDeliverySpeed(speed);
 		deliveryMethodPage.continueToPayment();
 	}

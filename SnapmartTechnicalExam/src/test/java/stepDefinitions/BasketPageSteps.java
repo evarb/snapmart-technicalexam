@@ -16,6 +16,7 @@ public class BasketPageSteps {
 	
 	@Then("checkout item from basket")
 	public void checkout_item_from_basket() throws InterruptedException {
+		System.out.println("checkout item from basket..");
 	    basketPage.addToBasket();
 	}
 	

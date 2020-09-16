@@ -15,6 +15,7 @@ public class OrderSummaryPageSteps {
 	
 	@Then("place order and pay")
 	public void place_order_and_pay() throws InterruptedException {
+		System.out.println("completing purchase...");
 		orderSummaryPage.completePurchase();
 	}
 	

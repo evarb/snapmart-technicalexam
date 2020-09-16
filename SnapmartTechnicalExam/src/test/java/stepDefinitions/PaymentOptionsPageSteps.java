@@ -16,6 +16,7 @@ public class PaymentOptionsPageSteps {
 	
 	@Then("select payment card")
 	public void select_payment_card() throws InterruptedException {
+		System.out.println("select payment card..");
 		paymentOptionsPage.selectPaymentCard();
 		paymentOptionsPage.proceedToReviewOrder();	
 	}
