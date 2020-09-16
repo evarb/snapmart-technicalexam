@@ -6,7 +6,7 @@ Scenario: Login on OWASP Juice Shop and checkout a valid item
 
 Given user is on Login page
 Then input credentials to login page
-And user search for "banana juice" 
+And user search for "eggfruit" 
 And add to basket the first item
 Then go to mini cart
 Then checkout item from basket
